@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; script-src 'self'; connect-src https://dkhtjkcygbpomaummdih.supabase.co; img-src 'self' data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
-  <title>Choose a new password — NearBuddy</title>
-  <meta name="description" content="Choose a new password for your NearBuddy account.">
+  <title>Open NearBuddy to reset your password</title>
+  <meta name="description" content="Continue password reset securely in the NearBuddy mobile app.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23F6D08A%22%20d%3D%22M12%2021.35l-1.45-1.32C5.4%2015.36%202%2012.28%202%208.5%202%205.42%204.42%203%207.5%203c1.74%200%203.41%200.81%204.5%202.09C13.09%203.81%2014.76%203%2016.5%203%2019.58%203%2022%205.42%2022%208.5c0%203.78-3.4%206.86-8.55%2011.54L12%2021.35z%22%2F%3E%3C%2Fsvg%3E">
   <link rel="stylesheet" href="../assets/styles.css">
   <link rel="stylesheet" href="reset.css">
@@ -18,17 +18,10 @@
   <main class="reset-main">
     <section class="reset-card" aria-labelledby="reset-heading">
       <p class="eyebrow-mini">Account recovery</p>
-      <h1 id="reset-heading">Choose a new password</h1>
-      <p id="reset-detail" class="reset-detail">Use at least 6 characters. This link can be used only once and expires after its security window.</p>
-      <form id="reset-form" novalidate>
-        <label for="password">New password</label>
-        <input id="password" name="password" type="password" minlength="6" maxlength="128" autocomplete="new-password" required>
-        <label for="confirm">Confirm password</label>
-        <input id="confirm" name="confirm" type="password" minlength="6" maxlength="128" autocomplete="new-password" required>
-        <p id="reset-status" class="reset-status" role="status" aria-live="polite"></p>
-        <button id="reset-submit" class="btn btn-action btn-lg" type="submit">Change password</button>
-      </form>
-      <a id="open-in-app" class="btn btn-ghost open-in-app" href="#" hidden>Open in NearBuddy</a>
+      <h1 id="reset-heading">Open NearBuddy to reset your password</h1>
+      <p id="reset-detail" class="reset-detail">Password reset continues securely in the NearBuddy mobile app.</p>
+      <p id="reset-status" class="reset-status" role="status" aria-live="polite"></p>
+      <a id="open-in-app" class="btn btn-action btn-lg open-in-app" href="#" hidden>Open in NearBuddy</a>
       <a class="reset-home" href="/">Return to NearBuddy</a>
     </section>
   </main>

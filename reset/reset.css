@@ -2,14 +2,7 @@
 .reset-card{width:min(100%,520px);padding:clamp(28px,6vw,48px);border:1px solid var(--line);border-radius:var(--r-xl);background:var(--card);box-shadow:var(--shadow-card)}
 .reset-card h1{font-size:clamp(2rem,6vw,2.75rem)}
 .reset-detail{color:var(--ink-soft);margin-bottom:1.5rem}
-#reset-form{display:grid;gap:.65rem}
-#reset-form label{font-weight:600;margin-top:.45rem}
-#reset-form input{width:100%;min-height:54px;padding:.9rem 1rem;border:1px solid #dcd5e1;border-radius:18px;background:#fff;color:var(--ink);font:inherit}
-#reset-form input:focus{border-color:var(--purple);outline:3px solid rgba(200,162,232,.25)}
-#reset-submit{justify-content:center;margin-top:.5rem}
-#reset-submit:disabled{cursor:not-allowed;opacity:.5;transform:none;box-shadow:none}
 .reset-status{min-height:1.65em;margin:.25rem 0 0;color:#9b3e2f}
-.reset-status.success{color:#2f6c38}
 .open-in-app{justify-content:center;margin-top:1rem}
 .open-in-app[hidden]{display:none}
 .reset-home{display:inline-block;margin-top:1.25rem;font-weight:600}
