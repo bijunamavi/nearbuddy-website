@@ -26,3 +26,13 @@ test('observability is stage-only and never logs URL or token', () => {
   }
   assert.doesNotMatch(js, /console\.(?:log|info|warn|error)\([^\n]*(?:token|location|href)/i);
 });
+
+test('Android can explicitly reopen the same canonical reset in the pinned app', () => {
+  assert.match(html, /id="open-in-app"[^>]+hidden>Open in NearBuddy/);
+  assert.match(js, /\/Android\/i\.test\(navigator\.userAgent\)/);
+  assert.match(js, /intent:\/\/near-buddy\.com\/reset\?token=/);
+  assert.match(js, /scheme=https;package=com\.nearbuddy\.mobile/);
+  assert.match(js, /S\.browser_fallback_url=\$\{fallback\}/);
+  assert.match(js, /openInApp\.hidden = false/);
+  assert.doesNotMatch(js, /window\.location\s*=|location\.replace\(|location\.assign\(/);
+});

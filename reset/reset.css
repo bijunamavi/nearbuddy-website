@@ -10,4 +10,6 @@
 #reset-submit:disabled{cursor:not-allowed;opacity:.5;transform:none;box-shadow:none}
 .reset-status{min-height:1.65em;margin:.25rem 0 0;color:#9b3e2f}
 .reset-status.success{color:#2f6c38}
+.open-in-app{justify-content:center;margin-top:1rem}
+.open-in-app[hidden]{display:none}
 .reset-home{display:inline-block;margin-top:1.25rem;font-weight:600}

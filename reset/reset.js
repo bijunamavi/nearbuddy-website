@@ -11,6 +11,7 @@
   const confirm = document.getElementById('confirm');
   const submit = document.getElementById('reset-submit');
   const status = document.getElementById('reset-status');
+  const openInApp = document.getElementById('open-in-app');
   let submitted = false;
 
   const show = (message, success = false) => {
@@ -25,6 +26,15 @@
   }
   stage('reset_link_received');
   stage('reset_parsed');
+
+  // Explicit user gesture only: never auto-open the app. The package-pinned Android
+  // intent carries the same canonical HTTPS URL/token, and returns to this exact web
+  // page when the app is unavailable. Other platforms keep the control hidden.
+  if (/Android/i.test(navigator.userAgent)) {
+    const fallback = encodeURIComponent(window.location.href);
+    openInApp.href = `intent://near-buddy.com/reset?token=${encodeURIComponent(token)}#Intent;scheme=https;package=com.nearbuddy.mobile;S.browser_fallback_url=${fallback};end`;
+    openInApp.hidden = false;
+  }
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
