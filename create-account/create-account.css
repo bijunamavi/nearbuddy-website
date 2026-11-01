@@ -1,0 +1,3 @@
+/* The shared .btn style sets display, which would otherwise override the HTML hidden attribute. */
+[hidden] { display: none !important; }
+#store-button, #store-android, #store-ios, #open-in-app { margin-top: 12px; }
